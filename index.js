@@ -6,7 +6,7 @@ import { authRoute } from "./src/routes/auth.route.js";
 import { routeCargo } from "./src/routes/cargo.routes.js";
 import { routeCandidato } from "./src/routes/candidato.routes.js";
 import { routeVotacao } from "./src/routes/votacao.route.js";
-import { routeSwagger } from "./src/routes/swagger.route.js";
+import { routeSwagger } from "./src/routes/swagger.route.cjs";
 
 import cors from "cors";
 
