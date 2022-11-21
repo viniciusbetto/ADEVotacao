@@ -1,0 +1,102 @@
+PRESIDENTE
+VICE-PRESIDENTE
+SECRETARIO
+TESOUREIRO
+DIRETOR REGIÃO NORTE
+DIRETOR REGIÃO NORDESTE
+DIRETOR REGIÃO CENTR OESTE
+DIRETOR REGIÃO SUDESTE
+DIRETOR REGIÃO SUL
+
+
+CARGOS
+	CARGO
+	TITULAR
+
+CANDIDATOS
+	CARGO - POPULATE CARGOS
+	CANDIDATO - POPULATE USUARIOS
+	VOTOS
+
+USUARIOS
+	NOME
+	EMAIL
+	SENHA
+	TIPO - N=NORMAL A=ADMINISTRADOR
+
+VOTACAO
+	ANO
+	USUARIO VOTANTE
+	CANDIDATO - POPULATE CANDIDATOS
+	DATA
+
+
+
+
+
+
+
+FICHA DE AVALIAÇÃO DA DIRETORIA DO MOTO GRUPO 
+Presidente - Antonio Valter Lira da Silva                                                                   
+BOM ( X )          REGULAR (  )           RUIM (  )                                                                  
+-	Se não estar satisfeito com o representante, quem você indicaria para ocupar o lugar do mesmo?  Nome____________________________________ 
+
+Vice Presidente- Paulo Célio Florentino Cesar                                                        
+BOM (  )          REGULAR (  )           RUIM (X )                                                                  
+-	Se não estar satisfeito com o representante, quem você indicaria para ocupar o lugar do mesmo? Nome__LUIZ FEITOSA 
+
+Secretário (a)- Amanda Machado Crispim da Silva                                                                        
+BOM ( X )          REGULAR (  )           RUIM (  )                                                                  
+-	Se não estar satisfeito com o representante, quem você indicaria para ocupar o lugar do mesmo? Nome____________________________________ 
+
+Secretário (a)- Joab dos Santos Conceição                                                             
+BOM ( X )          REGULAR (  )           RUIM (  )                                                                  
+-	Se não estar satisfeito com o representante, quem você indicaria para ocupar o lugar do mesmo? Nome____________________________________ 
+
+Tesoureiro- João Teixeira de Goés                                                                          
+BOM (  )          REGULAR (X  )           RUIM (  )                                                                   
+-	Se não estar satisfeito com o representante, quem você indicaria para ocupar o lugar do mesmo? Nome____________________________________ 
+
+Tesoureiro- Vinícius Fernandes Betto da Silva                                                           
+BOM (X  )          REGULAR (  )           RUIM (  )                                                                   
+-	Se não estar satisfeito com o representante, quem você indicaria para ocupar o lugar do mesmo? Nome____________________________________ 
+
+Diretor Região Norte e Nordeste- Anildo Santos Marques                                                                      
+BOM ( X )          REGULAR (  )           RUIM (  )                                                                  
+-	Se não estar satisfeito com o representante, quem você indicaria para ocupar o lugar do mesmo? Nome____________________________________ 
+
+Diretor Região Sudeste- Alexsandro da Silva                                                                                
+BOM (X  )          REGULAR (  )           RUIM (  )                                                                  
+-	Se não estar satisfeito com o representante, quem você indicaria para ocupar o lugar do mesmo? Nome____GILBERTO 
+
+Sugestões ___________________________________________________________                    
+____________________________________________________________________ 
+
+Criticas______________________________________________________________
+_____________________________________________________________________ 
+
+
+
+
+        "/usuario": {},
+        "/usuario/{id}/": {},
+        "/usuario/usrnome/{nome}": {},
+        "/usuario/{id}/": {},
+        "/usuario/{id}": {},
+        "/auth/": {},
+        "/cargo/": {},
+        "/cargo": {},
+        "/cargo/{id}": {},
+        "/cargo/{id}/": {},
+        "/cargo/{id}": {},
+
+        "/candidato/": {},
+        "/candidato": {},
+        "/candidato/{id}": {},
+        "/candidato/{id}/": {},
+        "/candidato/{id}": {},
+
+        "/votacao/": {},
+        "/votacao": {},
+        "/votacao/{id}": {}
+    

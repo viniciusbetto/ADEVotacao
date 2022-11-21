@@ -1,0 +1,131 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "titulo": "Sistema de Votação",
+        "descrição": "Controle, armazenamento e computação de votação de pessoas devidamente cadastradas pelo administrador na API",
+        "contato": { "email": "viniciusbetto@gmail.com"},
+        "versão": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000",
+            "descrição": "Local Server"
+        }
+    ],
+    "paths": {
+        "/usuario/create": {
+            "post": {
+                "summary": "Criar novo Usuário",
+                "description": "Rota responsável pela criação de um novo usuário",
+                "tags": ["Users"],
+                "security": [{ "bearerAuth": []}],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/User"
+                            },
+                            "examples": {
+                                "usuario": {
+                                    "value": {
+                                        "nome": "VINICIUS FERNANDO BETTO DA SILVA",
+                                        "email": "viniciusbetto@gmail.com",
+                                        "senha": "123456"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "responses":{
+            "400": {
+                "description": "Não Encontado"
+            },
+            "201":{
+                "description": "Criado",
+                "content":{
+                    "application/json":{
+                        "schema": {
+                            "type": "object",
+                            "$ref": "#/components/schemas/User"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes":{
+            "bearerAuth":{
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        },
+        "schemas": {
+            "User": {
+                "type": "object",
+                "properties": {
+                    "nome": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Cargos":{
+                "type": "object",
+                "properties": {
+                    "nome":{
+                        "type": "string"
+                    },
+                    "titular":{
+                        "type": "string"
+                    }
+                }
+            },
+            "Candidatos": {
+                "type": "object",
+                "properties": {
+                    "cargo": {
+                       "type": "mongoose.Schema.Types.ObjectId",
+                       "ref": "Cargo"
+                    },
+                    "usuario": {
+                      "type": "mongoose.Schema.Types.ObjectId",
+                      "ref": "User"
+                    },
+                    "votos": {
+                      "type": "Number"
+                    }
+                }
+            },
+            "Votacao": {
+                "type": "object",
+                "properties": {
+                    "ano": {
+                        "type": "string"
+                    },
+                    "votante": {
+                        "type": "mongoose.Schema.Types.ObjectId",
+                        "ref": "User"
+                    },
+                    "candidato": {
+                        "type": "mongoose.Schema.Types.ObjectId",
+                        "ref": "Candidato"
+                    },
+                    "data": {
+                        "type": "Date"
+                    }                    
+                }
+
+            }
+        }
+    }
+}
