@@ -8,6 +8,10 @@
     },
     "servers": [
         {
+            "url": "https://api-adevotacao.onrender.com",
+            "descrição": "Render Server"
+        },
+        {
             "url": "http://localhost:3000",
             "descrição": "Local Server"
         }
