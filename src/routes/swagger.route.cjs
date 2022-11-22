@@ -1,4 +1,4 @@
-const Router = require("express").Router();
+const routeSwagger = require("express").Router();
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("../swagger.json"); //assert { type: "json" };
 
